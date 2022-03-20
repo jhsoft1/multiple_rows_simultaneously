@@ -1,0 +1,16 @@
+<div >
+
+        <form method="POST" action="multi_rows">
+            {% csrf_token %}
+            {{formset.management_form}}
+
+            {% for form in formset%}
+            {{form}}
+            <hr>
+            {% endfor %}
+            <br/>
+            <div >
+                <button type="submit" class="btn btn-danger btn-lg">Submit</button>
+            </div>
+
+        </form>
